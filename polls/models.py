@@ -17,7 +17,9 @@
 import datetime
 from django.db import models
 from django.utils import timezone
-from sqlshards.db.shards.models import ShardedAutoField, PartitionModel
+from sqlshards.db.shards.models import PartitionModel
+from sqlshards.db.shards.fields import ShardedAutoField
+
 
 class Poll(models.Model):
     def __unicode__(self):
