@@ -149,15 +149,15 @@ Now you can finally go and test the stuff in the django shell
 
 ```
 $ ./manage.py shell
-$ from polls.models import Poll, Choice
-$ from django.utils.timezone import now as djnow
-$ p1 = Poll.objects.create(question='q1?', pub_date=djnow())
-$ p2 = Poll.objects.create(question='q2?', pub_date=djnow())
+from polls.models import Poll, Choice
+from django.utils.timezone import now as djnow
+p1 = Poll.objects.create(question='q1?', pub_date=djnow())
+p2 = Poll.objects.create(question='q2?', pub_date=djnow())
 
-$ c1_p1 = Choice.objects.create(poll_id=p1.id, choice_text='choice1 p1', votes=1)
-$ c1_p2 = Choice.objects.create(poll_id=p2.id, choice_text='choice1 p2', votes=1)
-$ c2_p1 = Choice.objects.create(poll_id=p1.id, choice_text='choice2 p1', votes=1)
-$ c2_p2 = Choice.objects.create(poll_id=p2.id, choice_text='choice2 p2', votes=1)
+c1_p1 = Choice.objects.create(poll_id=p1.id, choice_text='choice1 p1', votes=1)
+c1_p2 = Choice.objects.create(poll_id=p2.id, choice_text='choice1 p2', votes=1)
+c2_p1 = Choice.objects.create(poll_id=p1.id, choice_text='choice2 p1', votes=1)
+c2_p2 = Choice.objects.create(poll_id=p2.id, choice_text='choice2 p2', votes=1)
 ```
 
 Check your clusters, and see where these items were saved. Amazing!
