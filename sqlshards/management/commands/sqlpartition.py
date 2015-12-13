@@ -123,7 +123,7 @@ $$ LANGUAGE PLPGSQL;""".format(our_epoch=our_epoch)
             if not hasattr(obj, '_shards') or not obj._shards.is_master:
                 continue
 
-            if obj._meta.module_name == model:
+            if obj._meta.module_name == model.lower():
                 return obj
         raise ValueError
 
