@@ -109,7 +109,7 @@ class ShardedAutoField(AutoField):
         if self.model._shards.is_master:
             return "bigint"
 
-        return "bigint DEFAULT next_sharded_id('%s', %d)" % (
+        return "bigint DEFAULT next_sharded_id('%s'::varchar, %d)" % (
             get_sharded_id_sequence_name(self.model),
             self.model._shards.num)
 

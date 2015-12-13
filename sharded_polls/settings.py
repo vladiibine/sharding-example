@@ -33,9 +33,9 @@ MANAGERS = ADMINS
 DATABASE_CONFIG = {
     'root': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'USER': 'testrole',
+        'PASSWORD': 'asdf',
+        'HOST': '127.0.0.1',
         'PORT': '',
     },
     'servers': {
@@ -45,8 +45,8 @@ DATABASE_CONFIG = {
         'sharded': {
             'NAME': 'sharded_polls',
             'HOSTS': {
-                0: {},
-                1: {},
+                0: {'HOST': '127.0.0.1', 'PORT': 5433},
+                1: {'HOST': '127.0.0.1', 'PORT': 5434},
             }
         }
     }
