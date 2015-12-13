@@ -2,6 +2,7 @@
 Example of sharding tools used at Disqus
 
 Fork, to make it work!
+This presentation made me fork the repo: https://speakerdeck.com/mikeclarke/sharding-with-the-django-orm
 
 ### Setting up postgres
 
