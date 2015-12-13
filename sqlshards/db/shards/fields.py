@@ -19,6 +19,7 @@ from django.db.models.fields import AutoField, BigIntegerField
 from django.db.models.signals import post_syncdb, class_prepared
 from django.db.utils import DatabaseError
 from django.utils.translation import ugettext_lazy as _
+from sqlshards.db.shards.helpers import get_sharded_id_sequence_name
 
 
 class AutoSequenceField(BigIntegerField):
